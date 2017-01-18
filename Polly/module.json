@@ -3,7 +3,7 @@
   "name": "AWS Polly",
   "type": 3,
   "vendor": "",
-  "aliases": [ "AWS Polly" ],
+  "aliases": [ "Polly" ],
   "parentRequirements": [],
   "childRequirements": [],
   "implemented": [],
