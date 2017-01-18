@@ -1,0 +1,11 @@
+{
+  "id": "{B91A47C9-A1FC-451C-BCCC-AD03910D14B9}",
+  "name": "AWS Polly",
+  "type": 3,
+  "vendor": "",
+  "aliases": [ "AWS Polly" ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "POLLY"
+}
