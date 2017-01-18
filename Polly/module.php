@@ -1,5 +1,5 @@
 <?
-class AWSPolly extends IPSModule
+class Polly extends IPSModule
 {
     
     public function Create()
