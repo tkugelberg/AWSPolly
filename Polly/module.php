@@ -1,5 +1,5 @@
 <?
-class Ivona extends IPSModule
+class AWSPolly extends IPSModule
 {
     
     public function Create()
