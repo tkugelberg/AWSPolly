@@ -16,7 +16,8 @@
 // +-----------------------+-----------+-------------------------------+
 // | EU (Ireland)          | eu-west-1 | polly.eu-west-1.amazonaws.com |
 // +-----------------------+-----------+-------------------------------+
-
+// to get voices:
+// aws polly describe-voices --output text |awk '{ print "{ \"label\": \""$4"/"$6"/"$2"\", \"value\": \""$3"\"   }," }' | sort
 
 class POLLY_TTS{
     private $utc_tz      = "";
