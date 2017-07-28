@@ -56,7 +56,7 @@ if($path && IPS_GetProperty(IPS_GetParent($_IPS["SELF"]), "deleteFiles")){
         IPS_SetScriptTimer($deleteScriptID, 300); 
     }
     
-    public function getMP3($text)
+    public function getMP3(string $text)
     {
         include_once(__DIR__ . "/polly.php");
         return (new POLLY_TTS( $this->ReadPropertyString("accessKey") , 
@@ -65,7 +65,7 @@ if($path && IPS_GetProperty(IPS_GetParent($_IPS["SELF"]), "deleteFiles")){
                                $this->ReadPropertyString("voice") ))->get_mp3($text);
     }
 
-    public function saveMP3($text)
+    public function saveMP3(string $text)
     {
         $file_name = md5($text).".mp3";
 
