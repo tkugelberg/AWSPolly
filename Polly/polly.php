@@ -45,9 +45,17 @@ class POLLY_TTS{
 
     public function get_mp3( $text )
     {
-        $payload = json_encode(array( ('OutputFormat')  => 'mp3',
-                                      ('Text')          => $text,
-                                      ('VoiceId')       => $this->voice ) );
+        if (preg_match('/^<speak.*speak>/',$text) == 1){
+          $payload = json_encode(array( ('OutputFormat')  => 'mp3',
+                                        ('Text')          => $text,
+                                        ('TextType')      => 'ssml',
+                                        ('VoiceId')       => $this->voice ) );
+        }else{
+          $payload = json_encode(array( ('OutputFormat')  => 'mp3',
+                                        ('Text')          => $text,
+                                        ('TextType')      => 'text',
+                                        ('VoiceId')       => $this->voice ) );
+        }
 
         $datestamp                = new \DateTime( "now", $this->utc_tz );
         $longdate                 = $datestamp->format( "Ymd\\THis\\Z");
