@@ -102,7 +102,7 @@ class POLLY_TTS{
 
         // check for magic number of mp3 with ID3 tag
         if ( substr(bin2hex($result), 0, 6) != "494433" )
-          throw new Exception("Response from Ivona is no mp3: ".$result);
+          throw new Exception("Response from AWS Polly is no mp3: ".$result);
 
 
         return $result;
